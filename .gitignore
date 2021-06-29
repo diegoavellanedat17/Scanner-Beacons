@@ -1,0 +1,4 @@
+node_modules
+/ClientServer/node_modules
+config.json
+/ClientServer/public/js/confg.js
