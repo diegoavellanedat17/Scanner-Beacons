@@ -69,27 +69,6 @@ return clicked;
 
 
 
-// $( ".station__btn" ).click(function() {
-
-//     if (clicked){
-//         wave1.restart();
-//         wave2.restart();
-//         wave1.pause();
-//         wave2.pause();
-//         clicked=false;
-//         $( ".icon-zaboo" ).css("color","#808089");
-
-//     }
-//     else{
-//         wave1.play();
-//         wave2.play();
-//         clicked=true;
-//         $( ".icon-zaboo" ).css("color","#5b0eeb");
-//     }
-
-
-//   });
-
 $( "body" ).on('click','.station__btn',function() {
     clicked= CreateWaves()
     if (clicked){
@@ -173,18 +152,25 @@ canvas.on('mouse:wheel', function(opt) {
 $("#add-space").click(function(){
 
 
-    console.log('Hey')
+
+
     var space_name = $("#space-name").val()
     console.log(space_name)
 
     if(space_name != ""){
 
+      var shadow = new fabric.Shadow({
+        color: '#9baacf',
+        blur: 10
+      });
+
         const rect= new fabric.Rect({
           width:100,
           height:100,
           fill:'#e4ebf5',
-          stroke: 'white',
+          shadow: shadow,
           strokeWidth: 3,
+          opacity:1,
           centeredScaling:true,
 
       });
@@ -198,6 +184,7 @@ $("#add-space").click(function(){
         })(rect.toObject);
       
       canvas.add(rect)
+      canvas.sendToBack(rect)
 
       rect.name = space_name;
       var text = new fabric.Text(rect.name, {
@@ -252,7 +239,7 @@ $("#add-station").click(function(){
       
      
   });
-
+  
   canvas.add(circle);
   canvas.bringToFront(circle)
 
@@ -291,8 +278,16 @@ function renderStaticCanvas(canvas_save){
       var top=element['top']
       var left=element['left']
       var id= `zaboo-station${i}`;
+      
+
+      if($(`#zaboo-station${i}`).length){
+        console.log("existe no menearse");
+      }else{
+        console.log("No existe, agregar")
+        addStation(id)
+      }
+
       i=i+1;
-      addStation(id)
       //console.log(canvasPosLeft+left,canvasPosTop+top)
       placeDiv(canvasPosLeft+left-9,canvasPosTop+top-9,id)
       

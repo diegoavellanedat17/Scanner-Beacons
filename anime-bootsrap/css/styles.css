@@ -303,6 +303,11 @@ canvas{
   height: 100px;
 }
 
+/*--------------hide----space*/
+#edit-space{
+
+}
+
 hr {
   margin: 1rem 0;
   color: inherit;
