@@ -14,152 +14,73 @@
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body>
+        <!-- https://codepen.io/animationbro/pen/QWNBdKE -->
+
+        <!-- <div class="station" id="zaboo-station" >
+            <span class="station__btn" >
+                <ion-icon class="icon-zaboo" name="pause">B</ion-icon>
+                <ion-icon class="play" name="play"></ion-icon>
+              </span>
+              <span class="circle__back-1"></span>
+              <span class="circle__back-2"></span>
+        </div> -->
+
+        <div class="beacon" id="zaboo-beacon">                   
+        </div>
+        
         <div class="d-flex" id="wrapper">
 
             <div id="page-content-wrapper">
  
                 <div class="container">
                     <h1 class="mt-4">Localización Indoor Zaboo</h1>
-                    <div class="row">
+                    <div class="row d-flex justify-content-center">
 
-                        <div class="col-11 components mb-2 ">
+                        <div class="col-9 components mb-2 d-flex justify-content-center align-items-center">
 
-
-                            <div class="row d-flex justify-content-center">
-                                <div class="col-10 grid mt-3 row">
-                                    <!-- dentro de esto se arma la grilla -->
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-                                    <div class="grid-item col-1"></div>
-
-                                    
-
-
-
-                                </div>
-
-                            </div>
-                            <div class="beacon">
-                                
-                            </div>
-
-                            <div class="station" id="zaboo-station" >
-                                <span class="station__btn" >
-                                    <ion-icon class="icon-zaboo" name="pause">B</ion-icon>
-                                    <ion-icon class="play" name="play"></ion-icon>
-                                  </span>
-                                  <span class="circle__back-1"></span>
-                                  <span class="circle__back-2"></span>
-                            </div>
+                            <canvas id="canvas-static" class=""></canvas>
 
                         </div>
+
+
                         <p class="mt-2">Componentes de tu sistema</p>
                         <div class="col-2 kit-components mt-2">
-
                         </div>
-                        <p class="mt-2">Edita tu espacio</p>
+                        <div class="col-2 kit-components mt-2">
+                        </div>
+                        <div class="col-2 kit-components mt-2">
+                        </div>
 
-                            <!-- aca van los botones referentes a agregar las cosas al espacio -->
-                            <div class="col-2 mb-3 pt-2">
-                                <div class="row">
-                                    <p class="mt-2 mb-2 col-12">Escoje entre las opciones</p>
-                                    <div class="btn btn__primary col-12 mt-1" id="add-space">Agrega Espacio</div>
-                                    <div class="btn btn__primary col-12 mt-1" id="add-station">Agrega Estación</div>
-                                    <div class="btn btn__primary col-12 mt-1" id="add-light">Agrega Luz</div>
+
+                        <section id="edit-space">
+                            <p class="mt-2">Edita tu espacio</p>
+                            <div class="row">
+                                <!-- aca van los botones referentes a agregar las cosas al espacio -->
+                                <div class="col-2 mb-3 pt-2">
+                                    <div class="row">
+                                        
+                                        <p class="mt-2 mb-2 col-12">Escoje entre las opciones</p>
+
+                                        <div class="search col-12 mt-1">
+                                            <input type="text" class="search__input mb-2" id="space-name" placeholder="Nombre del lugar ...">
+                                                <div class="search__icon">
+                                                    <ion-icon name="search"></ion-icon>
+                                                </div>
+                                        </div>
+
+                                        <div class="btn btn__primary col-12 mt-1" id="add-space">Agrega Espacio</div>
+                                        <div class="btn btn__primary col-12 mt-1" id="add-station">Agregar Estación</div>
+                                        <div class="btn btn__primary col-12 mt-1" id="remove">Remover Objeto</div>
+                                        <div class="btn btn__primary col-12 mt-1" id="save">Guardar Plano</div>
+                                    </div>
+
                                 </div>
 
+                                <div class="col-9 mb-3 pt-2">
+                                    <canvas id="canvas" ></canvas>
+                                </div>
                             </div>
-
-                            <div class="col-9 mb-3 pt-2">
-                                <canvas id="canvas" ></canvas>
-                            </div>
+                        </section>
                         
                     </div>
 
