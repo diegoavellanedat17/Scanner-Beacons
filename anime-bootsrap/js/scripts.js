@@ -121,7 +121,7 @@ function placeBeacon(x_pos, y_pos,maxX,maxY) {
 
 // Aqui pondre los contructores de cavas editable
 const canvas= new fabric.Canvas('canvas',{
-    width:400,
+    width:300,
     height:150,
     backgroundColor:'#e4ebf5',
     selection:false,
@@ -280,9 +280,7 @@ function renderStaticCanvas(canvas_save){
       var id= `zaboo-station${i}`;
       
 
-      if($(`#zaboo-station${i}`).length){
-        console.log("existe no menearse");
-      }else{
+      if($(`#zaboo-station${i}`).length === 0 ){
         console.log("No existe, agregar")
         addStation(id)
       }
@@ -363,5 +361,16 @@ window.onresize = reportWindowSize;
 function reportWindowSize(){
   var canvas_save= JSON.stringify(canvas);
   //renderizar en el otro otro canvas
+  console.log(window.innerWidth)
+  if(window.innerWidth>780){
+    canvas.setWidth(400);
+  }
+  else if(window.innerWidth>440){
+    canvas.setWidth(300);
+  }
+  else{
+    canvas.setWidth(200);
+  }
+  
   renderStaticCanvas(canvas_save)
 }
