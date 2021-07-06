@@ -127,6 +127,15 @@ const canvas= new fabric.Canvas('canvas',{
     selection:false,
     
 })
+if(window.innerWidth>780){
+  canvas.setWidth(400);
+}
+else if(window.innerWidth>440){
+  canvas.setWidth(300);
+}
+else{
+  canvas.setWidth(200);
+}
 canvas.renderAll()
 
 // Aqui pondre los contructores de cavas estatico
@@ -150,9 +159,6 @@ canvas.on('mouse:wheel', function(opt) {
 })
 
 $("#add-space").click(function(){
-
-
-
 
     var space_name = $("#space-name").val()
     console.log(space_name)
@@ -244,6 +250,19 @@ $("#add-station").click(function(){
   canvas.bringToFront(circle)
 
 })
+
+// Add title to space 
+$("#add-title").click(function(){
+  console.log("click")
+  $("#title-name").css("display","block");
+  anime({
+    targets: '#title-name',        
+    opacity: '1',
+    duration: 500,
+    easing: 'easeInOutQuad',
+
+  })
+})
   
 // Remove objects
 function deleteObjects(){
@@ -330,9 +349,14 @@ function renderStaticCanvas(canvas_save){
 }
 
 $( "#add-space" ).mouseover(function() {
-  $(".search").css("display","block").fadeIn('slow')
+  $("#space-name").css("display","block").fadeIn('slow')
  console.log("aca")
 });
+
+$(".segmented-control__1").mouseover(function(){
+console.log('telme')
+
+})
 
 function addStation(id){
   $("body").append(`
@@ -374,3 +398,15 @@ function reportWindowSize(){
   
   renderStaticCanvas(canvas_save)
 }
+
+$(".kit-components").click(function(){
+  console.log("hey")
+
+    anime({
+      targets: '.kit-components',
+      width: '50%', // -> from '28px' to '100%',
+      easing: 'easeInOutQuad',
+      direction: 'normal',
+      loop: false
+    });
+})

@@ -11,6 +11,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&amp;display=swap" rel="stylesheet">
         <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
+      rel="stylesheet">
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body>
@@ -44,11 +46,11 @@
 
 
                         <p class="mt-2">Componentes de tu sistema</p>
-                        <div class="col-2 kit-components mt-2">
+                        <div class="col-2 kit-components mt-2 mr-2 ml-2 ">
                         </div>
-                        <div class="col-2 kit-components mt-2">
+                        <div class="col-2 kit-components mt-2 mr-2 ml-2">
                         </div>
-                        <div class="col-2 kit-components mt-2">
+                        <div class="col-2 kit-components mt-2 mr-2 ml-2">
                         </div>
 
      
@@ -56,13 +58,20 @@
                             <p class="mt-2">Edita tu espacio</p>
                             <div class="row">
                                 <!-- aca van los botones referentes a agregar las cosas al espacio -->
-                                <div class="col-2 mb-3 pt-2">
+                                <div class="col-2 mb-3 pt-2 mr-1" >
                                     <div class="row">
                                         
                                         <p class="mt-2 mb-2 col-12">Escoje entre las opciones</p>
 
                                         <div class="search col-12 mt-1">
-                                            <input type="text" class="search__input mb-2" id="space-name" placeholder="Nombre del lugar ...">
+                                            <input type="text" class="search__input mb-2" placeholder="Nombre del lugar ..."  id="space-name">
+                                                <div class="search__icon">
+                                                    <ion-icon name="search"></ion-icon>
+                                                </div>
+                                        </div>
+
+                                        <div class="search col-12 mt-1" id="title-name">
+                                            <input type="text" class="search__input mb-2"  placeholder="Titulo del grafico">
                                                 <div class="search__icon">
                                                     <ion-icon name="search"></ion-icon>
                                                 </div>
@@ -71,43 +80,60 @@
                                         <div class="btn btn__primary col-12 mt-1" id="add-space">Agrega Espacio</div>
                                         <div class="btn btn__primary col-12 mt-1" id="add-station">Agregar Estación</div>
                                         <div class="btn btn__primary col-12 mt-1" id="remove">Remover Objeto</div>
-                                        <div class="btn btn__primary col-12 mt-1" id="save">Guardar Plano</div>
+                                        <div class="btn btn__primary col-12 mt-1">Guardar Plano</div>
                                     </div>
 
                                 </div>
 
-                                <div class="col-9 mb-3 pt-2 back-canvas ">
+                                <div class="col-1"></div>
+
+                                <div class="col-9 mb-3 pt-2 back-canvas " >
                                     <div class="row dupla-canvas">
                                         <div class="col-1 side-canvas">
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    B1
-                                                </div>
-                                                <div class="col-12">
-                                                    B2
-                                                </div>
-                                                <div class="col-12">
-                                                    B1
-                                                </div>
-                                                <div class="col-12">
-                                                    B2
-                                                </div>
-                                                <div class="col-12">
-                                                    B1
-                                                </div>
-                                                <div class="col-12">
-                                                    B2
-                                                </div>
-                                                <div class="col-12">
-                                                    B1
-                                                </div>
-                                                <div class="col-12">
-                                                    B2
-                                                </div>
+                                            <div class="row d-flex justify-content-start">
+                                                <label for="tab-1" class= "col-12 segmented-control__1" id="add-title">
+                                                    <!-- <p class="option-p">add title</p> -->
+                                                    <i class="material-icons mt-2" style="font-size:16px;">title</i>
+                                                </label>
+                                                    
+                                                    <label for="tab-1" class= "col-12 segmented-control__1 ">
+                                                        <i class="material-icons mt-2" style="font-size:16px;">add_location_alt</i>    
+                                                    </label>
+
+                                                    <label for="tab-1" class= "col-12 segmented-control__1 ">
+                                                        <i class="material-icons mt-2" style="font-size:16px;">sensors</i>    
+                                                    </label>
+                                                    
+
+                                                    <label for="tab-1" class= "col-12 segmented-control__1 ">
+                                                        <i class="material-icons mt-2" style="font-size:16px;">delete_forever</i>    
+                                                    </label>
+
+                                                    <label for="tab-1" class= "col-12 segmented-control__1" id="save" title="Guardar Plano">
+                                                        <i class="material-icons mt-2" style="font-size:16px;">save</i>    
+                                                    </label>
+
+                                                    <label for="tab-1" class= "col-12 segmented-control__1 ">
+                                                        <i class="material-icons mt-2" style="font-size:16px;">track_changes</i>    
+                                                    </label>
+
+                                                    <label for="tab-1" class= "col-12 segmented-control__1 ">
+                                                        <i class="material-icons mt-2" style="font-size:16px;">thermostat</i>    
+                                                    </label>
+
+                                                    <label for="tab-1" class= "col-12 segmented-control__1 ">
+                                                        <i class="material-icons mt-2" style="font-size:16px;">water</i>    
+                                                    </label>
                                             </div>
 
                                         </div>
-                                        <canvas id="canvas" ></canvas>
+                                            
+                                            <canvas id="canvas" >
+                                            
+                                            </canvas>
+                                        
+                                        
+
                                     </div>
                                     
                                 </div>
