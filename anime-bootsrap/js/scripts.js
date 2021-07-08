@@ -11,7 +11,7 @@ function ShowComponents(){
     $(`#kit-items`).append(`
 
             <div class=" col-2  square-components" >
-                <div class=" kit-components" onmousedown="mouseDown()" onmouseup="mouseUp()">
+                <div class=" kit-components" id="disp-${element}" onmousedown="mouseDown()" onmouseup="mouseUp()">
 
                     <div class="top-icon" >
                         <i class="material-icons " style="font-size:13px; position:relative;">sensors</i>   
@@ -38,7 +38,7 @@ function ShowComponents(){
                       </div>
 
                       <div class="col-6 nombre-icon" >
-                        <div class="status">
+                        <div class="status" id="status-${element}">
                         </div>
                       </div>
 
@@ -83,57 +83,8 @@ function beaconLimits(x,y){
 });
 }
 
-function CreateWaves(){
-   wave1 = anime({
-    targets:'.circle__back-1',
-    keyframes: [
-        {scale: 2, opacity: 1, duration:700},
-        {scale: 4, opacity: 1, duration:700},
-        {scale: 8, opacity: 0, duration:1000},
-
-      ],
-    easing: 'linear',
-    loop: true,
-    autoplay:false
-});
-
- wave2 = anime({
-    targets:'.circle__back-2',
-    keyframes: [
-        {scale: 1, opacity: 1, duration:700},
-        {scale: 3, opacity: 1, duration:700},
-        {scale: 6, opacity: 0, duration:1000},
-
-      ],
-    easing: 'easeInOutExpo',
-    loop: true,
-    autoplay:false
-});
-
-var clicked=false;
-return clicked;
-}
-
-$( "body" ).on('click','.station__btn',function() {
-    clicked= CreateWaves()
-    if (clicked){
-        wave1.restart();
-        wave2.restart();
-        wave1.pause();
-        wave2.pause();
-        clicked=false;
-        $( ".icon-zaboo" ).css("color","#808089");
-
-    }
-    else{
-        wave1.play();
-        wave2.play();
-        clicked=true;
-        $( ".icon-zaboo" ).css("color","#5b0eeb");
-    }
 
 
-});
 
 //Ubicar la estación 
 function placeDiv(x_pos, y_pos,id) {
@@ -547,28 +498,14 @@ function reportWindowSize(){
 //     });
 // })
 
-function addStation(id){
-  $("body").append(`
 
-    <div class="station" id="${id}" title="${id}">
-            <span class="station__btn" >
-                <ion-icon class="icon-zaboo" name="pause">B</ion-icon>
-                <ion-icon class="play" name="play"></ion-icon>
-              </span>
-              <span class="circle__back-1"></span>
-              <span class="circle__back-2"></span>
-        </div>
-    
-        `)
-}
-//19 mayo 80
+
 anime({
   targets :'.battery-level',
   width: '100%', // -> from '28px' to '100%',
   easing: 'easeInOutQuad',
   direction: 'alternate',
-  loop: true
-  
+  loop: true  
 })
 
 function mouseDown(){
